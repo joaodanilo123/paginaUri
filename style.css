@@ -1,5 +1,25 @@
+:root {
+    --azul-claro: #0066ff;
+    --azul-escuro: #043d91
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #dad9d9;
+}
+
 @media only screen and (max-width: 600px) {
     #destaques section {
+        flex-direction: column;
+    }
+
+    footer {
         flex-direction: column;
     }
 }
@@ -24,29 +44,15 @@
     }
 }
 
-
-:root {
-    --azul-claro: #0066ff;
-    --azul-escuro: #043d91
-}
-
-body,
-html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-    background: #dad9d9;
-}
-
 a {
     text-decoration: none;
 }
 
 /* .cabecalho */
 
+#titulo-grande, #titulo-pequeno {
+    margin-left: 1%;
+}
 
 .cabecalho {
     display: flex;
