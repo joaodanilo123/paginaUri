@@ -1,40 +1,82 @@
-body, html {
+@media only screen and (max-width: 600px) {
+    #destaques section {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #titulo-pequeno {
+        display: inline;
+    }
+
+    #titulo-grande {
+        display: none;
+    }
+
+    #menu-grande {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    #titulo-pequeno {
+        display: none;
+    }
+}
+
+
+:root {
+    --azul-claro: #0066ff;
+    --azul-escuro: #043d91
+}
+
+body,
+html {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* HEADER */
+body {
+    background: #dad9d9;
+}
 
-header {
+a {
+    text-decoration: none;
+}
+
+/* .cabecalho */
+
+
+.cabecalho {
     display: flex;
     justify-content: space-between;
     color: white;
-    background-color: #0066ff;
+    background-color: var(--azul-claro);
     position: fixed;
     top: 0;
     width: 100%;
 }
 
-header ul {
+.cabecalho ul {
     display: flex;
     list-style-type: none;
 }
 
-header ul li {
+.cabecalho ul li {
     margin-right: 1rem;
 }
 
-header ul li a{
+.cabecalho ul li a {
     text-decoration: none;
     color: white;
 }
 
-header h1 {
+.cabecalho h1 {
     font-size: 1.1rem;
 }
 
-/* FIM HEADER */
+/* FIM .cabecalho */
 
 /* MAIN */
 
@@ -42,32 +84,136 @@ main {
     margin-top: 3.1rem;
 }
 
-section:first-child {
+.banner-destaque {
     padding: 2rem;
     text-align: center;
-    background-color: #043d91;
-    color: white;
+    background-color: var(--azul-escuro);
 }
 
-section:first-child h2 {
+.banner-destaque h2 {
     font-size: 1rem;
 }
 
-section:first-child article {
+.banner-destaque article {
     font-size: 1rem;
     margin-top: 20px;
     max-width: 70%;
     margin: auto;
 }
 
-section:first-child article h3{
+.banner-destaque article h3 {
     font-size: 2rem;
+}
+
+button {
+    background-color: white;
+    border: none;
+    border-radius: 0.5rem;
+    width: 6rem;
+    height: 2rem;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 #destaques {
     margin-bottom: 5rem;
 }
 
-#destaques section{
+#destaques section {
     display: flex;
+    justify-content: space-around;
+}
+
+h2 {
+    text-align: center;
+}
+
+#destaques section article {
+    flex: 1;
+    border: 0.1rem solid rgb(150, 149, 149);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background-color: white;
+    margin: 1rem;
+    padding-top: 0;
+    box-shadow: 0px 2px 15px 1px grey;
+}
+
+.texto-branco {
+    color: white;
+}
+
+.link-noticia {
+    text-decoration: none;
+    border-radius: 0.2rem;
+    padding: 0.3rem;
+    background-color: var(--azul-claro);
+}
+
+form {
+    background-color: white;
+    margin: 5%;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 10pt;
+    border: 0.1rem solid rgb(150, 149, 149);
+    align-items: center;
+    padding: 2rem;
+}
+
+form button {
+    background-color: var(--azul-claro);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    width: 6rem;
+    height: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+input {
+    border: none;
+    font-size: 12pt;
+    border-bottom: 2px solid #666666;
+    padding: 3pt;
+    outline: none;
+    width: 100%;
+    margin: 1rem;
+    text-align: center;
+}
+
+input:focus {
+    background-color: #d3d0d0;
+    border-bottom: 2px solid #004669;
+}
+
+footer {
+    background-color: var(--azul-escuro);
+    color: white;
+    display: flex;
+    padding: 2rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+footer div {
+    flex: 1;
+    margin: 1rem;
+}
+
+ul {
+    list-style-type: none;
+    list-style-position: inside;
+    padding: 0;
+}
+
+footer div ul li {
+    padding-top: 0.5rem;
+}
+
+footer div ul li a {
+    color: white;
 }
